@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX CRUD Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <h1 class="alert alert-info text-center mb-5 p-3">
+        AJAX — Bootstrap — jQuery (CRUD)
+    </h1>
+
+    <div class="row">
+        <form class="col-sm-5" id="myform">
+            <input type="hidden" id="studentid">
+
+            <h3 class="alert alert-warning text-center p-2">
+                ADD / UPDATE Student
+            </h3>
+
+            <div class="mb-2">
+                <label>Name</label>
+                <input type="text" class="form-control" id="nameid">
+            </div>
+
+            <div class="mb-2">
+                <label>Email</label>
+                <input type="email" class="form-control" id="emailid">
+            </div>
+
+            <div class="mb-2">
+                <label>Password</label>
+                <input type="password" class="form-control" id="passwordid">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnadd">
+                Save
+            </button>
+
+            <div id="msg" class="mt-3"></div>
+        </form>
+
+        <div class="col-sm-7 text-center">
+            <h3 class="alert alert-warning p-2">
+                Show Student Information
+            </h3>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/jqajaks.js"></script>
+</body>
+</html>
